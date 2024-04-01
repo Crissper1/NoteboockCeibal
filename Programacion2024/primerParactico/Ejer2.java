@@ -23,7 +23,7 @@ public class Ejer2 {
     }
     
         
-    
+
     public static void main(String[] args) {
         
         /*Realizar una aplicación que solicite el ingreso del número del mes (1 – 12) y 

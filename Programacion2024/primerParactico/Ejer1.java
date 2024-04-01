@@ -4,7 +4,7 @@ public class Ejer1 {
     
     public static void main(String[] args) {
         /*Realizar una aplicación que utilizando estructuras repetitivas (for, while o do … 
-while) muestre la siguiente figura:
+        while) muestre la siguiente figura:
 * * * * * 
  * * * *
   * * *
