@@ -34,9 +34,14 @@ public class Ejer2 {
 
         int mes = 0, ano = 2024;
         
-        Scanner input = new Scanner(System.in); 
+        Scanner input = new Scanner(System.in);
+        do { 
         System.out.print("Ingrese N° del mes: ");
         mes = input.nextInt();
+        if (mes < 1 || mes > 12){
+            System.out.println("Ingrese dato correcto, N° Entre 1 y 12. Vuelva a intentar... ");
+        }
+        }while(mes < 1 || mes > 12);
         String nombreMes = obtenerNombreMes(mes);
         int days = obtenerDiasEnMes(mes, ano);
         
