@@ -1,6 +1,6 @@
-package Ejes1;
+package primerParactico;
 
-public class primereje1 {
+public class Ejer1 {
     
     public static void main(String[] args) {
         /*Realizar una aplicación que utilizando estructuras repetitivas (for, while o do … 
