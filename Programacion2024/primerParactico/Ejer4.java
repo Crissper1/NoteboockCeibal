@@ -13,7 +13,7 @@ public class Ejer4 {
         System.out.print("Ingrese exponente: ");
         n2 =input.nextInt();
         for (int i = 0; i < n2; i++) {
-            resultado *= n1; 
+            System.out.println(resultado+ "x " + n1);  
         }
         System.out.println("La potencia de " + n1 + " elevado a " + n2 + " es " + resultado);
      
