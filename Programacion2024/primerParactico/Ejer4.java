@@ -4,8 +4,7 @@ import java.util.*;
 muestre, utilizando estructuras repetitivas, la potencia de la base al exponente */
 public class Ejer4 {
     public static void main(String[] args) {
-        int n1 = 0, n2 = 0;
-        double resultado = 1;
+        int n1 = 0, n2 = 0, resultado = 1;
         Scanner input = new Scanner(System.in);
         System.out.println("Potencia de la base al exponente");
         System.out.print("Ingrese base: ");
@@ -13,8 +12,13 @@ public class Ejer4 {
         System.out.print("Ingrese exponente: ");
         n2 =input.nextInt();
         for (int i = 0; i < n2; i++) {
-            System.out.println(resultado+ "x " + n1);  
+            resultado *= n1;
+            if (i > 0) {
+                System.out.print("x");
+            }       
+            System.out.print("" +  n1 );
         }
+        System.out.println(" = "+resultado);
         System.out.println("La potencia de " + n1 + " elevado a " + n2 + " es " + resultado);
      
     input.close();

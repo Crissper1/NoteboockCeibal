@@ -7,7 +7,7 @@ public class Ejer3 {
         if (numero < 2) {
             return false;
         }
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
+        for (int i = 2; i * i <= numero; i++) {
             if (numero % i == 0) {
                 return false;
             }
@@ -19,7 +19,7 @@ public class Ejer3 {
 
         for (int i = 2; i <= 100; i++) {
             if (esPrimo(i)) {
-                System.out.print(i + ",");
+                System.out.print(" " +i);
             }
     
 
