@@ -6,7 +6,6 @@ import java.util.Locale;
 
 
 public class Ejer2 {
-    @SuppressWarnings("deprecation")
     public static String obtenerNombreMes(int month) {
         Month mes = Month.of(month);
         return mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
@@ -21,8 +20,6 @@ public class Ejer2 {
                 return 31;
         }
     }
-    
-        
 
     public static void main(String[] args) {
         
@@ -32,7 +29,7 @@ public class Ejer2 {
             b. el nombre del mes */
 
 
-        int mes = 0, ano = 2024;
+        int mes = 0, año = 2024;
         
         Scanner input = new Scanner(System.in);
         do { 
@@ -43,7 +40,7 @@ public class Ejer2 {
         }
         }while(mes < 1 || mes > 12);
         String nombreMes = obtenerNombreMes(mes);
-        int days = obtenerDiasEnMes(mes, ano);
+        int days = obtenerDiasEnMes(mes, año);
         
         System.out.println("El número de días en el mes es: " + days);
         System.out.println("El Nombre del mes es: " + nombreMes);
