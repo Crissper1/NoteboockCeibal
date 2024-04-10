@@ -50,7 +50,7 @@ public static float calcularPromedio(int[] arreglo) {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
     int [] resultado;
-    int[] num = new int[3];
+    int[] num = new int[10];
 
     for (int j = 0; j < num.length; j++) {
         System.out.print("Ingrese 10 N° "+ (j+1) + " : ");
