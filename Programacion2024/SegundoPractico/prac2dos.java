@@ -12,7 +12,7 @@ public class prac2dos {
                         System.out.print("*");
                     }
                     if (j==1|| j < largo -1 ){
-                        System.out.print(" ");
+                        System.out.print("p");
                     }      
                 }
                 if (i==0 || i == ancho -1){
