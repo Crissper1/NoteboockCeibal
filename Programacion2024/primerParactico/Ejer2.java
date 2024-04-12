@@ -6,6 +6,7 @@ import java.util.Locale;
 
 
 public class Ejer2 {
+    @SuppressWarnings("deprecation")
     public static String obtenerNombreMes(int month) {
         Month mes = Month.of(month);
         return mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
