@@ -18,7 +18,7 @@ for (int i = 0; i < altura; i++) {
         System.out.print(" ");
     }
     for (int k = 0; k <= i; k++) {
-        System.out.print("*");
+        System.out.print("* ");
     }
     System.out.println();
 } 
