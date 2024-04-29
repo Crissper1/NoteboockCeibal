@@ -8,21 +8,24 @@ import java.util.Scanner;
 // ▪ Validar que las unidades no sean iguales
 public class ejer3ro {
 
-    public static String[] num_and_Medida() {
-        Scanner input = new Scanner(System.in);
-        String[] temN = new String[2]; // Cambié la capacidad a 2 para almacenar el número y la medida
-        System.out.print("Ingrese N° a convertir: ");
-        temN[0] = input.nextLine();
-        System.out.print("Ingrese la primera letra de su medida de temperatura (Celsius, Fahrenheit, Kelvin): ");
-        temN[1] = input.nextLine();
-        input.close();
-        return temN;
+    public static int ValorN() {
+      Scanner dato = new Scanner(System.in);
+      int valor;
+      System.out.print("Ingrese valor a convertir: ");
+      do {
+        if(!dato.hasNextInt()){
+          System.out.print("Dato erroneo!!!\nVuelva a Ingresar: ");
+          dato.next();
+        }
+      }while(!dato.hasNextInt());
+      valor=dato.nextInt();
+      return valor;
     }
     
     public static void main(String[] args) {
-      String[] a = num_and_Medida();  
-      System.out.println(a[0] +" " + a[1] );
-        
+      
+      System.out.println(ValorN());
+      
         
         
     }
