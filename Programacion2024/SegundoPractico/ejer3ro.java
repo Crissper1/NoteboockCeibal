@@ -16,7 +16,7 @@ public class ejer3ro {
         System.out.print("Ingrese la primera letra de su medida de temperatura (Celsius, Fahrenheit, Kelvin): ");
         temN[1] = input.nextLine();
         input.close();
-        return temN;
+        return num_and_Medida();
     }
     
     public static void main(String[] args) {
