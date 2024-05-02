@@ -12,6 +12,7 @@ public class ejer3ro {
     public static int ValorN() {
       Scanner dato = new Scanner(System.in);
       int valor;
+      System.out.println("CONVERTIDOR DE MEDIDA");
       System.out.print("Ingrese valor a convertir: ");
       do {
         if(!dato.hasNextInt()){
@@ -27,7 +28,9 @@ public class ejer3ro {
             char m;
             boolean bandera=false;
             do {
-            System.out.print("Ingrese su medidada de temperatura\nCelsus la letra 'C'\nFahrenheit la letra 'F'\nKelvin la letra 'K' : ");
+            
+            System.out.println("Ingrese su medidada de temperatura\nCelsius la letra 'C'");
+             System.out.print("Fahrenheit la letra 'F'\nKelvin la letra 'K' : ");
             m=dato.nextLine().charAt(0);
             m=Character.toUpperCase(m);
             if(m=='C'|| m=='F'||m=='K'){
@@ -55,21 +58,21 @@ public class ejer3ro {
                    
                 }finally{dato.close();}
             } else if (letra.equals("F")) {
-                System.out.println("Puede convertir N° \n1- Fahrenheit a Celsius\n2- Fahrenheit a Kelvin");
+                System.out.print("Puede convertir N° \n1- Fahrenheit a Celsius\n2- Fahrenheit a Kelvin: ");
                 try { 
                   Integer.parseInt(opvalor);  
                   opvalor = dato.nextLine();    
                 } catch (NumberFormatException e) {
-                    System.out.println("Dato incorrecto! Ingrese un número entero (1 o 2).");
+                    System.out.println("Dato incorrecto! Ingrese un número entero (1 o 2): ");
                     dato.nextLine();
                 }
             } else if (letra.equals("K")) {
-                System.out.println("Puede convertir N° \n1- Kelvin a Celsius\n2- Kelvin a Fahrenheit");
+                System.out.print("Puede convertir N° \n1- Kelvin a Celsius\n2- Kelvin a Fahrenheit\nes: ");
                 try {
                   opvalor = dato.nextLine();
                   Integer.parseInt(opvalor);
                 } catch (NumberFormatException e) {
-                    System.out.println("Dato incorrecto! Ingrese un número entero (1 o 2).");
+                    System.out.print("Dato incorrecto! Ingrese un número entero (1 o 2): ");
                     dato.nextLine();
                 }   
             } else {
@@ -83,24 +86,50 @@ public class ejer3ro {
     }
     
     public static void main(String[] args) {
-      int vl=ValorN(),valorConver=0;
-      char m=medida();
+      int vl=ValorN();
+      float  valorConver=0;
+      char m=medida(),m1=' ';
       String cM = cambMedia(m);
-      //Celsius a Fahrenheit
+      if(m=='C'){
+        
+        //Celsius a Fahrenheit
       if(cM.equals("1")){
         valorConver=(vl * 9/5) + 32;
+        m1='F';
       }
+        //Celsius a kelvin
       if(cM.equals("2")){
         valorConver= (vl  + 273);
+        m1='K';
       }
-     System.out.println("Valor convertido es " + valorConver);
     }
-
-   
-    
-        
-        
-    
+    if(m=='F'){
+        //Fahrenheit a Celsius 
+      if(cM.equals("1")){
+        valorConver=(vl * 5/9) - 32;
+        m1='C';
+      }
+        //Fahrenheit a Kelvin
+      if(cM.equals("2")){
+        valorConver= (vl + 459 * 5/9);
+        m1='K';
+      }
+    }
+    if(m=='K'){
+      //Kelvin a Celsius
+      if(cM.equals("1")){
+        valorConver=(vl - 273);
+        m1='C';
+      }
+      //Kelvin a Fahrenheit
+      if(cM.equals("2")){
+        valorConver= (vl - 273 * 9/5 + 32);
+        m1='F';
+      } 
+    }
+      System.out.println(vl+"°"+m+ " son "+valorConver+"°"+m1);
+ 
   }
+}
 
 
