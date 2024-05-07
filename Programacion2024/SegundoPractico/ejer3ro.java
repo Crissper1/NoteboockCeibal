@@ -91,7 +91,6 @@ public class ejer3ro {
       char m=medida(),m1=' ';
       String cM = cambMedia(m);
       if(m=='C'){
-        
         //Celsius a Fahrenheit
       if(cM.equals("1")){
         valorConver=(vl * 9/5) + 32;
