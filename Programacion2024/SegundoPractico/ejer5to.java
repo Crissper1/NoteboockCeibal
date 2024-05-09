@@ -28,17 +28,57 @@ public class ejer5to {
         System.out.print("Ingrese el operador segun su N°: ");
         do {
             if(!dato.hasNextInt()){
-                System.out.print("Dato erroneo o fuera de Rango!!!\nVuelva a Ingresar: ");
+                System.out.print("Dato erroneo!!!\nVuelva a Ingresar: ");
                 dato.next();
               }
             }while(!dato.hasNextInt());      
         int op = dato.nextInt();
-
         return op;
     }
+    static int suma(int a, int b){
+        int resultado=a+b;
+        return resultado;
+    }
+    static int resta(int a, int b){
+        int resultado=a-b;
+        return resultado;
+    }
+    static int divicion (int a, int b){
+        int resultado=a/b;
+        return resultado;
+    }
+    static int multi(int a, int b){
+        int resultado=a*b;
+        return resultado;
+
+    }
+    static  int[] digAB(){
+        
+        int[] dig_AB = new int[2];
+        dig_AB[0]=0;
+        dig_AB[1]=0;
+        System.out.print("Ingrese el su 1er N°: ");
+        dig_AB[0]=dato.nextInt();
+        System.out.print("Ingrese el su 2do N°: ");
+        dig_AB[1]=dato.nextInt();
+        return dig_AB[];
+    }
+
     public static void main(String[] args) {
         
         menu();
-        System.out.println(op());
+        switch (op()) {
+            case 1:
+                suma(digAB()[0], digAB()[1]);
+                
+                break;
+        
+            default:
+                break;
+        }
+
+
+    dato.close();
     }
+
 }
