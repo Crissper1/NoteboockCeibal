@@ -24,13 +24,7 @@ public class ejer5to {
                          "0) Salir\n");
     }
     static int op(){
-        System.out.print("Ingrese el operador segun su N°: ");
-        do {
-            if(!dato.hasNextInt()){
-                System.out.print("Dato erroneo!!!\nVuelva a Ingresar: ");
-                dato.next();
-              }
-            }while(!dato.hasNextInt());      
+        System.out.print("Ingrese el operador segun su N°: ");      
         int op = dato.nextInt();
         return op;
     }
@@ -85,8 +79,6 @@ public class ejer5to {
             default:
                 break;
         }
-
-
     dato.close();
     }
 

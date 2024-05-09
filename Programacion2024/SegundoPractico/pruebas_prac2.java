@@ -2,7 +2,6 @@ package SegundoPractico;
 
 public class pruebas_prac2 {
     public static void main(String[] args) {
-        
         int ancho = 4;
         int largo = 4;
         for (int i = 0; i <= ancho; i++) {
