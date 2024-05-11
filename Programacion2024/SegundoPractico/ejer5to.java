@@ -15,6 +15,16 @@ Se debe definir un método para:
 • para cada operación matemática */
 public class ejer5to {
     public static Scanner dato = new Scanner(System.in);
+    static int formato_a_Num() {
+        int valor = 0;
+        try {
+            valor = Integer.parseInt(dato.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.print("Dato Incorrecto!!! Vuelva a Ingresar: ");
+            valor = formato_a_Num(); 
+        }
+        return valor;
+    }
     static void menu(){
         System.out.print("Calculador\n");
         System.out.print("1) Sumar\r\n" + 
@@ -24,8 +34,8 @@ public class ejer5to {
                          "0) Salir\n");
     }
     static int op(){
-        System.out.print("Ingrese el operador segun su N°: ");      
-        int op = dato.nextInt();
+        System.out.print("Ingrese el operador segun su N°: ");
+        int op = formato_a_Num();
         return op;
     }
     static int suma(int a, int b){
@@ -47,16 +57,19 @@ public class ejer5to {
     }
     static  int[] digAB(){
         System.out.print("Ingrese el su 1er N°: ");
-        int a=dato.nextInt();
+        int a=formato_a_Num();
         System.out.print("Ingrese el su 2do N°: ");
-        int b=dato.nextInt();
+        int b=formato_a_Num();
         int[] resultado = {a,b}; 
         return resultado;
     }
     public static void main(String[] args) {
         int[] resultado;
+        int op;
+        do{
         menu();
-        switch (op()) {
+        op=op();
+        switch (op) {
             case 1:
                 resultado=digAB();
                 System.out.println("Su resultado es "+suma(resultado[0], resultado[1]));
@@ -77,8 +90,10 @@ public class ejer5to {
                 System.out.print("Game Over");
                 break;
             default:
+                System.out.println("Dato Incorrecto!!!Otra Vez...");
                 break;
         }
+    }while(op!=0);
     dato.close();
     }
 

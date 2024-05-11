@@ -55,7 +55,6 @@ public class ejer3ro {
   
   }
   public static int ValorN() {
-    //Scanner dato = new Scanner(System.in);
     int valor;
     System.out.println("CONVERTIDOR DE MEDIDA");
     System.out.print("Ingrese valor a convertir: ");

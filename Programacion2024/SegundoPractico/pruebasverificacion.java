@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class pruebasverificacion {
     public static Scanner dato = new Scanner(System.in);
-    static int datolimpio() {
-        int dato1 = 0;
+    static int formato_a_Num() {
+        int valor = 0;
         try {
-            dato1 = Integer.parseInt(dato.nextLine());
+            valor = Integer.parseInt(dato.nextLine());
         } catch (NumberFormatException e) {
             System.out.print("Dato Incorrecto!!! Vuelva a Ingresar: ");
-            dato1 = datolimpio(); 
+            valor = formato_a_Num(); 
         } finally {
             dato.close();
         }
-        return dato1;
+        return valor;
     }
     public static void main(String[] args) {
         System.out.print("Ingrese dato: ");
-        int dato = datolimpio();
+        int dato = formato_a_Num();
         System.out.println(dato);
 
     }
