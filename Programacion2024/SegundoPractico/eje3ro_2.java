@@ -30,8 +30,8 @@ public class eje3ro_2 {
           }while(!bandera);
           return m;
         }
-    static char cambMedida(){
-        char letra = medInicial(), cM=' ';
+    static char cambMedida(char med_inicial){
+        char letra = med_inicial , cM=' ';
         
         if (letra=='C'){
             do {
@@ -48,7 +48,7 @@ public class eje3ro_2 {
             System.out.print("Puede convertir\nFahrenheit a Celsius 'C'\n"+
                                               "Fahrenheit a Kelvin 'K': ");
             cM=Character.toUpperCase(dato.next().charAt(0));
-            if(cM!='F'|| cM!='K'){
+            if(cM!='C'|| cM!='K'){
                 System.out.println("Dato Incorrecto!!!Vuleva a Intenta");
             }
             }while(cM!='C'|| cM!='K');
@@ -58,7 +58,7 @@ public class eje3ro_2 {
             System.out.print("Puede convertir\nKelvin a Celsius 'C'\n"+
                                               "Kelvin a Fahrenheit 'F': ");
             cM=Character.toUpperCase(dato.next().charAt(0));
-            if(cM!='F'|| cM!='K'){
+            if(cM!='F'|| cM!='C'){
                 System.out.println("Dato Incorrecto!!!Vuleva a Intenta");
             }
             }while(cM!='F'|| cM!='C');
@@ -78,7 +78,7 @@ public class eje3ro_2 {
         System.out.print("Ingrese su medidada de temperatura\n" +
                          "Celsius la letra 'C'\nFahrenheit la letra 'F'\n" +
                          "Kelvin la letra 'K' :");
-        char mI=medInicial(), cM=cambMedida();
+        char mI=medInicial(), cM=cambMedida(mI);
         System.out.println(valorM+" "+mI+"Valor a convertir"+ cM);
 
         dato.close();
